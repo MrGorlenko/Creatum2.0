@@ -1,0 +1,92 @@
+<template>
+  <div id='hero' class="Hero align-items-center justify-content-end d-flex flex-column">
+
+    <img class='cube cube-1' src="../assets/cube1.png" alt="">
+    <img class='cube cube-2' src="../assets/cube2.png" alt="">
+    <img class='cube cube-3' src="../assets/cube3.png" alt="">
+
+    <h2>
+      Мы <span>digital-агентство:</span>
+создаем проекты, приносящие <span>прибыль</span> нашим клиентам.
+    </h2>
+
+    <hr>
+
+    <p>
+      В основе наших решений всегда заложено выполнение задач. Мы никогда не делаем «красиво» просто так — мы делаем «красиво», которое зарабатывает вам деньги
+    </p>
+
+    <hr>
+
+    <p>
+      Мы работаем с 20XX-го года и постоянно ищем новаторские решения
+    </p>
+
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Hero'
+}
+</script>
+
+<style lang='scss'>
+.Hero{
+  height: 100vh;
+  position: relative;
+  .cube{
+    position: absolute;
+    z-index: -1;
+
+    &-1{
+      left: 94px;
+      top: 272px;
+    }
+
+    &-2{
+      right: 156px;
+      top: 100px;
+    }
+    &-3{
+      bottom: 0px;
+      right: 120px;
+    }
+  }
+
+  h2{
+    font-size: 62px;
+    line-height: 120%;
+    color: #020202;
+    width: 1024px;
+    margin: auto;
+
+    margin-top: 0;
+    margin-bottom: 32px;
+    
+    span{
+      color: #6709DE;
+      font-weight: 800;
+    }
+  }
+
+  hr{
+    height: 1px;
+    background: #E6DDF0;
+    color: #E6DDF0;
+    width: 180px;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 32px;
+  }
+
+  p{
+    margin-bottom: 32px;
+    font-size: 18px;
+    line-height: 120%;
+    text-align: center;
+    color: #8D8794;
+    max-width: 838px;
+  }
+}
+</style>

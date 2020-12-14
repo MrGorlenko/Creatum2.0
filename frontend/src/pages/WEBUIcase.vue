@@ -1,12 +1,12 @@
 <template>
   <div class="Case">
       <HeaderClose
-      path="/SMMCases"
-      :title="SMMCases[id].name"
+      path='/WEBUIs'
+      :title="WEBUICases[id].name"
       />
       <div class="container-fluid p-0">
           <iframe 
-          :src="SMMCases[id].template"
+          :src="WEBUICases[id].template"
         ></iframe>
       </div>
   </div>
@@ -14,6 +14,7 @@
 
 <script>
 import HeaderClose from '@/components/Header-close.vue'
+// import 
 import { mapState } from 'vuex';
 export default {
     name: 'SMMCase',
@@ -28,7 +29,7 @@ export default {
   },
     computed: {
         ...mapState({
-         SMMCases: state => state.SMMCases.casesSMM
+         WEBUICases: state => state.WEBUICases.casesWEBUI
     })
   }
 

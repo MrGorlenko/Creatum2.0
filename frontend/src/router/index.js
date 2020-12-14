@@ -33,16 +33,51 @@ const routes = [
   },
   {
     path: '/SMMcase/:id',
-    name
+    name: 'SMMCase',
+    component: () => import('../pages/SMMcase.vue'),
+    props: true
+  },
+  {
+    path: '/WEBUIs',
+    name: 'WEBUIs',
+    component: () => import('../pages/WEBUIs')
+  },
+  {
+    path: '/WEBUIcase/:id',
+    name: 'WEBUICase',
+    component: () => import('../pages/WEBUIcase.vue'),
+    props: true
+  },
+  //
+  {
+    path: '/MobileUIs',
+    name: 'MobileUIs',
+    component: () => import('../pages/MobileUIs')
+  },
+  {
+    path: '/MobileUIcase/:id',
+    name: 'MobileUIcase',
+    component: () => import('../pages/MobileUIcase.vue'),
+    props: true
+  },
+  //
+  {
+    path: '/BrandingCases',
+    name: 'BrandingCases',
+    component: () => import('../pages/BrandingCases')
+  },
+  {
+    path: '/Brandingcase/:id',
+    name: 'BrandingCase',
+    component: () => import('../pages/BrandingCase.vue'),
+    props: true
+  },
+  {
+    path: '/Vacancy/:id',
+    name: 'Vacancy',
+    component: () => import('../pages/Vacancy.vue'),
+    props: true
   }
-  // {
-  //   path: '/about',
-  //   name: 'About',
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  // }
 ]
 
 const router = new VueRouter({

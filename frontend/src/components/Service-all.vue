@@ -1,8 +1,5 @@
 <template>
   <div class="Service d-flex justify-content-between">
-    <!-- <div class="item h-100" style='background-image: url("@/assets/SMM.png") '>
-
-    </div> -->
     <div
     v-for="Service in Services"
     :key="Service.title"
@@ -34,19 +31,19 @@ export default {
           title: 'Web UI',
           descripton: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa amet venenatis, fusce donec blandit tortor, congue ut.',
           img: require('../assets/WebUI.png'),
-          url: '/'
+          url: '/WEBUIs'
         },
         {
           title: 'Mobile UI',
           descripton: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa amet venenatis, fusce donec blandit tortor, congue ut.',
           img: require('../assets/MobileUI.png'),
-          url: '/'
+          url: '/MobileUIs'
         },
         {
           title: 'Branding',
           descripton: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa amet venenatis, fusce donec blandit tortor, congue ut.',
           img: require('../assets/Branding.png'),
-          url: '/'
+          url: '/BrandingCases'
         }
       ]
     }

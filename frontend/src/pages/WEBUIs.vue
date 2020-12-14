@@ -3,37 +3,35 @@
   <div class="cases">
     <HeaderClose
       path='/'
-      title="SMM Cases"
+      title="WEBUI Cases"
       />
     <div class="p-0 justify-content-between container-fluid d-flex flex-wrap">
-      <div class="case d-flex justify-content-center align-items-center" v-for='(item,index) in SMMCases' :key='item.name'>
-
+      <div class="case d-flex justify-content-center align-items-center" v-for='(item,index) in WEBUICases' :key='item.name'>
         <Cases
         :name="item.name"
-        :path="/SMMCase/"
+        :path="/WEBUICase/"
         :index="index"
         :date="item.date"
         :img="item.preview"
         />
-
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import HeaderClose from '@/components/Header-close.vue'
+import HeaderClose from '@/components/Header-close.vue';
+import Cases from '@/components/Cases';
 import { mapState } from 'vuex';
-import Cases from '@/components/Cases'
 export default {
-  name: 'SMMcases',
+  name: 'WEBUIs',
   components: {
     HeaderClose,
     Cases
   },
   data() {
     return {
-      casesSMM:[
+      WEBUIs:[
         {
           name: 'case1' , 
           date: '11.12.2020',
@@ -64,7 +62,7 @@ export default {
   },
   computed: {
     ...mapState({
-      SMMCases: state => state.SMMCases.casesSMM
+       WEBUICases: state => state.WEBUICases.casesWEBUI
     })
   }
 }

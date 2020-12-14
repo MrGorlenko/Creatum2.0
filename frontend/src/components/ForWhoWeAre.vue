@@ -20,6 +20,7 @@
 <script>
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
+import { mapState } from 'vuex';
 export default {
   name: 'ForWhoWeAre',
   components: {
@@ -28,29 +29,6 @@ export default {
   },
   data() {
     return {
-      forWho: [
-        {
-          title: 'Стартапы',
-          paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu mattis tristique est at tellus. Aliquam eu aliquam vivamus platea vivamus augue faucibus. Pretium commodo massa nibh cras suspendisse porttitor iaculis ut proin. '
-        },
-        {
-          title: 'Креатив',
-          paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu mattis tristique est at tellus. Aliquam eu aliquam vivamus platea vivamus augue faucibus. Pretium commodo massa nibh cras suspendisse porttitor iaculis ut proin. '
-        },
-        {
-          title: 'Веб-разработка',
-          paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu mattis tristique est at tellus. Aliquam eu aliquam vivamus platea vivamus augue faucibus. Pretium commodo massa nibh cras suspendisse porttitor iaculis ut proin. '
-        },
-        {
-          title: 'Еще вот для вас',
-          paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu mattis tristique est at tellus. Aliquam eu aliquam vivamus platea vivamus augue faucibus. Pretium commodo massa nibh cras suspendisse porttitor iaculis ut proin. '
-        },
-        {
-          title: 'И для вас',
-          paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu mattis tristique est at tellus. Aliquam eu aliquam vivamus platea vivamus augue faucibus. Pretium commodo massa nibh cras suspendisse porttitor iaculis ut proin. '
-        },
-        
-      ],
       options: {
           type: 'loop',
           rewind : false,
@@ -62,6 +40,11 @@ export default {
           perMove   : 3
         },
     }
+  },
+  computed: {
+    ...mapState({
+      forWho: state => state.ForWho.forWho
+    })
   }
 }
 </script>

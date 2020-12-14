@@ -1,12 +1,12 @@
 <template>
   <div class="Case">
       <HeaderClose
-      path="/SMMCases"
-      :title="SMMCases[id].name"
+      path="/MobileUIs"
+      :title="MobileUIcases[id].name"
       />
       <div class="container-fluid p-0">
           <iframe 
-          :src="SMMCases[id].template"
+          :src="MobileUIcases[id].template"
         ></iframe>
       </div>
   </div>
@@ -28,7 +28,7 @@ export default {
   },
     computed: {
         ...mapState({
-         SMMCases: state => state.SMMCases.casesSMM
+         MobileUIcases: state => state.MobileUICases.casesMobileUI
     })
   }
 

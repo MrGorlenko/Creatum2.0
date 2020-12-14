@@ -1,74 +1,47 @@
 <template>
-  <div id=Crew class="JoinTheCrew">
+  <div name=Crew id=Crew class="JoinTheCrew">
     <h2 class="title">
       Присоединяйтесь к <span>команде</span>
     </h2>
     <div class="container">
       <div class="vacancies">
         <div class="vacancy d-flex align-items-center justify-content-between" 
-          v-for='vacancy in Vacancies' 
-          :key="vacancy.title"
+          v-for='(vacancy, index) in Vacancies' 
+          :key="vacancy.index"
           >
-          <div class="job-title d-flex align-items-center">
-            <p>{{vacancy.title}} <span>({{vacancy.state}})</span> </p>
-          </div>
-          <p>{{vacancy.subject.toUpperCase()}}</p>
-          <div class="place d-flex align-items-center justify-content-between">
-            <img src="../assets/place.png" alt="">
-            {{vacancy.location}}
-          </div>
+          <router-link
+          class='h-100 w-100 d-flex align-items-center justify-content-between'
+          :to="/Vacancy/+index"
+          >       
+            <div class="job-title d-flex align-items-center">
+              <p>{{vacancy.title}} <span>({{vacancy.state}})</span> </p>
+            </div>
+            <p>{{vacancy.subject.toUpperCase()}}</p>
+            <div class="place d-flex align-items-center justify-content-between">
+              <img src="../assets/place.png" alt="">
+              {{vacancy.location}}
+            </div>
+          </router-link>
+
         </div>
       </div>
     </div>
-<!-- 
-    <div class="modal"
-    :vacancy="vacancy">
-
-    </div> -->
   </div>
 </template>
 
 <script>
 import JoinTheCrew from '@/components/JoinTheCrew.vue'
+import { mapState } from 'vuex';
 export default {
   name: 'Crew',
   components: {
     JoinTheCrew
   },
-  data() {
-    return {
-      Vacancies: [
-        {
-          title: 'Mobile Senior Developer',
-          state: 'Удаленка или офис',
-          subject: 'DEVELOPMENT',
-          location: 'Moscow'
-        },
-                {
-          title: 'Head of Brand and Comunications',
-          state: 'Удаленка',
-          subject: 'design',
-          location: 'Moscow'
-        },
-                {
-          title: 'Mobile Senior Developer',
-          state: 'Удаленка или офис',
-          subject: 'OPERATIONS',
-          location: 'Moscow'
-        }
-      ],
-      // modalShow:false,
-    }
-  },
-  // methods: {
-  //   openModal(vacancy) {
-  //     this.modalShow = !this.modalShow;
-  //     this.vacancy = vacancy;
-  //   },
-  //   closeModal() {
-  //     this.modalShow = false
-  //   }
-  // }
+  computed: {
+    ...mapState({
+      Vacancies: state => state.Crew.Vacancies
+    })
+  }
 }
 </script>
 
@@ -89,9 +62,12 @@ export default {
     margin-bottom: 90px;
   }
   .vacancy{
-    padding: 32px 24px;
+    
     cursor: pointer;
-    p{
+    a{
+      padding: 32px 24px;
+      color: #020202;
+          p{
       margin-bottom: 0;
     }
     .job-title{
@@ -107,7 +83,11 @@ export default {
     &:hover{
       transition: .3s ease;
       background-color: rgba(235, 235, 235, 0.5);
+      text-decoration: none;
     }
+
+    }
+
   }
   
 }

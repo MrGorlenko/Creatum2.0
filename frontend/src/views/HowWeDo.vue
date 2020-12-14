@@ -18,6 +18,9 @@
         <splide-slide >
           Mobile app
         </splide-slide>
+        <splide-slide >
+          Performance
+        </splide-slide>
       </splide>
       </div>
 
@@ -29,7 +32,7 @@
         v-for='SMM in SMMs' :key="SMM.title">
         <p>{{SMM.title}}</p>
         <div class="time">
-          <span>{{SMM.time[0]}}</span>
+          <span>{{SMM.time.substring(0,2)}}</span>
           {{SMM.time.replace(/[0-9]/g, '')}}
         </div>
         </div>
@@ -39,7 +42,7 @@
         v-for='web_site in Web_sites' :key="web_site.title">
         <p>{{web_site.title}}</p>
         <div class="time">
-          <span>{{web_site.time[0]}}</span>
+          <span>{{web_site.time.substring(0,2)}}</span>
           {{web_site.time.replace(/[0-9]/g, '')}}
         </div>
         </div>
@@ -49,8 +52,18 @@
         v-for="mobile_app in Mobile_apps" :key="mobile_app.title">
           <p>{{mobile_app.title}}</p>
         <div class="time">
-          <span>{{mobile_app.time[0]}}</span>
+          <span>{{mobile_app.time.substring(0,2)}}</span>
           {{mobile_app.time.replace(/[0-9]/g, '')}}
+        </div>
+        </div>
+      </splide-slide>
+      <splide-slide>
+        <div class="cell d-flex align-items-center justify-content-between"
+        v-for="performance in Performances" :key="performance.title">
+          <p>{{performance.title}}</p>
+        <div class="time">
+          <span>{{performance.time.substring(0,2)}}</span>
+          {{performance.time.replace(/[0-9]/g, '')}}
         </div>
         </div>
       </splide-slide>
@@ -67,6 +80,7 @@
 <script>
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
+import { mapState } from 'vuex';
 export default {
   name: 'HowWeDo',
   components: {
@@ -96,40 +110,18 @@ export default {
           perPage:3
         },
         count : 0,
-        SMMs:[
-          {
-            title: 'Выбор фирменного стиля донесения',
-            time: '4 дня'
-          },
-          {
-            title: 'Дизайн',
-            time: '4 дня'
-          }
-        ],
-        Web_sites:[
-          {
-            title: 'Написание кода-оболочки',
-            time: '7 дней'
-          },
-          {
-            title: 'Разработка и запуск панели администратора',
-            time: '3 дня'
-          }
-        ],
-        Mobile_apps: [
-          {
-            title: 'Привязка сервера',
-            time: '7 дней'
-          },
-          {
-            title: 'Подключение внешних систем аналитики',
-            time: '1 день'
-          }
-        ]
       };
     },
     mounted() {
       this.$refs.primary.sync( this.$refs.secondary.splide );
+    },
+    computed: {
+      ...mapState({
+        SMMs: state => state.HowWeDo.SMMs,
+        Web_sites: state => state.HowWeDo.Web_sites,
+        Mobile_apps: state => state.HowWeDo.Mobile_apps,
+        Performances: state => state.HowWeDo.Performances
+      })
     }
 }
 </script>
@@ -160,7 +152,7 @@ export default {
       background-color: #FBD035;
       padding: 12px 8px;
       border-radius: 40px;
-      width: 68px;
+      width: auto;
       span{
         font-weight: 800;
         font-size: 16px;

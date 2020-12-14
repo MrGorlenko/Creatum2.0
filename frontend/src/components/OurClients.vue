@@ -101,6 +101,7 @@
 <script>
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
+import { mapState } from 'vuex';
 export default {
   name: 'OurClients',
   components: {
@@ -130,93 +131,15 @@ export default {
         perPage:3
       },
       count : 0,
-      icons: [
-        {
-          theme: 'SMM',
-          img: require('../assets/vector.png')
-        },
-        {
-          theme: 'Web-sites',
-          img: require('../assets/shazam.png')
-        },
-        {
-          theme: 'SMM',
-          img: require('../assets/xbox.png')
-        },
-        {
-          theme: 'SMM',
-          img: require('../assets/vector.png')
-        },
-        {
-          theme: 'Mobile-app',
-          img: require('../assets/vector.png')
-        },
-        {
-          theme: 'SMM',
-          img: require('../assets/xbox.png')
-        },
-        {
-          theme: 'Past',
-          img: require('../assets/xbox.png')
-        },
-        {
-          theme: 'SMM',
-          img: require('../assets/vector.png')
-        },
-        {
-          theme: 'Mobile-app',
-          img: require('../assets/vector.png')
-        },
-        {
-          theme: 'Web-sites',
-          img: require('../assets/stripe.png')
-        },
-        {
-          theme: 'Past',
-          img: require('../assets/stripe.png')
-        },
-        {
-          theme: 'Web-sites',
-          img: require('../assets/shazam.png')
-        },
-        {
-          theme: 'Web-sites',
-          img: require('../assets/stripe.png')
-        },
-        {
-          theme: 'Mobile-app',
-          img: require('../assets/youtube.png')
-        },
-        {
-          theme: 'Branding',
-          img: require('../assets/fb_messenger.png')
-        },
-        {
-          theme: 'Mobile-app',
-          img: require('../assets/youtube.png')
-        },
-        {
-          theme: 'Branding',
-          img: require('../assets/xbox.png')
-        },
-        {
-          theme: 'Branding',
-          img: require('../assets/fb_messenger.png')
-        },
-        {
-          theme: 'Past',
-          img: require('../assets/fb_messenger.png')
-        },
-        {
-          theme: 'Past',
-          img: require('../assets/youtube.png')
-        },
-
-      ]
     }
   },
   mounted() {
     this.$refs.primary.sync( this.$refs.secondary.splide );
+  },
+  computed: {
+    ...mapState({
+      icons: state => state.OurClients.icons
+    })
   }
 }
 </script>

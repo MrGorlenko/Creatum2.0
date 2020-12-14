@@ -6,28 +6,23 @@
       <path d="M34.2545 18.9608C35.0331 18.3877 36.1771 17.2337 36.797 16.3963C37.4167 15.5589 37.9836 14.949 38.0568 15.0409C38.1298 15.1326 38.6411 15.8088 39.1927 16.5432C39.7443 17.2775 40.833 18.3576 41.612 18.943C42.391 19.5287 43.0283 20.0884 43.0283 20.1868C43.0283 20.2852 42.382 20.8517 41.5921 21.4455C40.8024 22.0392 39.6869 23.1489 39.1137 23.9115C38.5406 24.6741 38.0093 25.2982 37.9336 25.2982C37.8579 25.2982 37.3266 24.6741 36.7535 23.9115C36.1803 23.1489 35.0648 22.0392 34.2751 21.4455C33.4852 20.8517 32.8389 20.2843 32.8389 20.1845C32.8389 20.0847 33.4759 19.534 34.2545 18.9608Z" fill="#7A30C5"/>
     </svg>
       <div class="navigation">
-        <!-- <router-link class='button button_yellow' to="/" active-class="active">What we do</router-link> 
-        <router-link class='button button_yellow' to="/HowWeDo">How we do</router-link> 
-        <router-link class='button button_yellow' to="/ForWho">For who</router-link> 
-        <router-link class='button button_yellow' to="/Crew">Crew</router-link>  -->
         <ul class='d-flex '>
           <li><button 
-          :class="{active: scrollPosition < 1200}" @click='goToBlock' 
+          :class="{active: scrollPosition < actualHeight*1.8}" @click='goToBlock' 
           class='button button_yellow' href="#WhatWeDo">What we do</button></li>
           <li><button 
-          :class="{active: scrollPosition > 1200 && scrollPosition < 1800}" @click='goToBlock' 
+          :class="{active: scrollPosition >= actualHeight*1.8 && scrollPosition < actualHeight*2.6}" @click='goToBlock' 
           class='button button_yellow' href="#HowWeDo">How we do</button></li>
           <li><button 
-          :class="{active: scrollPosition > 1800 && scrollPosition < 3000}" @click='goToBlock' 
+          :class="{active: scrollPosition >= actualHeight*2.6 && scrollPosition <= actualHeight*4.6}" @click='goToBlock' 
           class='button button_yellow' href="#ForWho">For who</button></li>
           <li><button
-          :class="{active: scrollPosition > 3000 && scrollPosition < 3600}" @click='goToBlock' 
+          :class="{active: scrollPosition >= actualHeight*4.6 && scrollPosition < actualHeight*5.5}" @click='goToBlock' 
            class='button button_yellow' href="#Crew">Crew</button></li>
         </ul>
       </div>
       
       <a @click='goToBlock' class='d-block request button button_purple' href="#GladToWork">Заявка</a>
-      <!-- <router-link to="/about">About</router-link> -->
     </div>
     <router-view/>
   </div>
@@ -38,12 +33,16 @@ import VueScrollTo from 'vue-scrollto';
 export default {
   data() {
     return {
-      scrollPosition: null
+      // ActualPosition: ActualPositionNumber + 'vh' ,
+      // ActualPositionNumber: 100 ,
+      scrollPosition: null,
+      actualHeight: window.innerHeight
+      // scrollNumber: 0
     }
   },
   methods: {
     goToBlock: function(event){
-      event.preventDefault()
+      // event.preventDefault()
       let link = event.target.getAttribute('href')
       document.querySelector(link).scrollIntoView({ behavior: 'smooth', block: 'start'}) 
     },

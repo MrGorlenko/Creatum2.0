@@ -10,9 +10,9 @@
           v-for='(vacancy, index) in Vacancies' 
           :key="vacancy.index"
           >
-          <a
+          <router-link
           class='h-100 w-100 d-flex align-items-lg-center align-items-start justify-content-between flex-lg-row flex-column'
-          :href="/Vacancy/+index"
+          :to="/Vacancy/+index"
           >       
             <div class="job-title">
               <p>{{vacancy.title}} <span>({{vacancy.state}})</span> </p>
@@ -22,7 +22,7 @@
               <img src="../assets/place.png" alt="">
               {{vacancy.location}}
             </div>
-          </a>
+          </router-link>
 
         </div>
       </div>

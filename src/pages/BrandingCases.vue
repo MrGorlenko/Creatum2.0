@@ -35,7 +35,10 @@ export default {
     ...mapState({
         BrandingCases: state => state.BrandingCases.casesBranding
     })
-  }
+  },
+    mounted () {
+  window.scrollTo(0, 0);
+},
 }
 </script>
 

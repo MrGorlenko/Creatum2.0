@@ -64,7 +64,10 @@ export default {
     ...mapState({
        WEBUICases: state => state.WEBUICases.casesWEBUI
     })
-  }
+  },
+    mounted () {
+  window.scrollTo(0, 0);
+},
 }
 </script>
 

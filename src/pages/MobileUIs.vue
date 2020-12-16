@@ -36,7 +36,10 @@ export default {
     //   SMMCases: state => state.SMMCases.casesSMM
     MobileUIcases: state => state.MobileUICases.casesMobileUI
     })
-  }
+  },
+    mounted () {
+  window.scrollTo(0, 0);
+},
 }
 </script>
 

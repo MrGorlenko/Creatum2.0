@@ -8,12 +8,12 @@
     <img class='w-100 h-100' :src="Service.img" alt="">
     <h3>{{Service.title}}</h3>
     <p>{{Service.descripton}}</p>
-    <!-- <router-link :to="Service.url">
+    <router-link :to="Service.url">
       <button class='button button_purple'>Подробнее</button>
-    </router-link> -->
-    <a :href="Service.url">
+    </router-link>
+    <!-- <a :href="Service.url">
       <button class='button button_purple'>Подробнее</button>
-    </a>
+    </a> -->
     </div>
   </div>
 </template>

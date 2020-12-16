@@ -2,7 +2,7 @@
   <div id="HowWeDo" class="HowWeDo">
     <h2 class='title'>How <span>we do</span></h2>
     <img class='cube' src="../assets/cube4.png" alt="">
-    <div class="container">
+    <div class="container p-lg-2 p-0">
 
       <div class="slider-navigation">
         <splide
@@ -26,6 +26,7 @@
 
       <splide :options="options"
       ref="primary"
+      class='p-lg-0 p-2'
       >
         <splide-slide>          
         <div class="cell d-flex align-items-center justify-content-between"
@@ -107,7 +108,16 @@ export default {
 		      isNavigation: true,
           updateOnMove: true,
           arrows: false,
-          perPage:3
+          perPage:3,
+          breakpoints: {
+            993: {
+              fixedWidth  : 85,
+              focus    : 'center',
+	            perPage  : 3,
+	            trimSpace: false,
+              
+            }
+          }
         },
         count : 0,
       };
@@ -164,5 +174,18 @@ export default {
     width: 600px;
     height: 300px;
 }
+}
+
+@media (max-width:992px){
+  .HowWeDo{
+    overflow-x: hidden;
+    .cell p{
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: start;
+      max-width: 208px;
+    }
+  }
 }
 </style>

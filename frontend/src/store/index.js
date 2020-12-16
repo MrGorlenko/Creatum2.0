@@ -9,6 +9,7 @@ import HowWeDo from '@/store/HowWeDo'
 import ForWho from '@/store/ForWho'
 import OurClients from '@/store/OurClients'
 import Crew from '@/store/Crew'
+import Common from '@/store/Common'
 
 Vue.use(Vuex)
 
@@ -22,6 +23,7 @@ export default new Vuex.Store({
     HowWeDo,
     ForWho,
     OurClients,
-    Crew
+    Crew,
+    Common
   }
 })

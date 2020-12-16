@@ -37,7 +37,15 @@ export default {
           arrows : false, 
           pagination  : false,
           perPage   : 2.6,
-          perMove   : 3
+          perMove   : 3,
+          breakpoints : {
+            992: {
+              gap : '1rem',
+	            perPage    : 1.5,
+              
+            }
+          },
+          
         },
     }
   },
@@ -73,6 +81,16 @@ export default {
     font-size: 14px;
     line-height: 140%;
     color: #8D8794;
+  }
+}
+
+@media (max-width:992px){
+  .ForWhoWeAre{
+    // overflow: hidden;
+    .slide-wrapper{
+      width: 95%;
+      margin-left: 5%;
+    }
   }
 }
 </style>

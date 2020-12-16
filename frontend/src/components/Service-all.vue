@@ -1,9 +1,9 @@
 <template>
-  <div class="Service d-flex justify-content-between">
+  <div class="Service d-flex justify-content-between  flex-lg-row flex-column">
     <div
     v-for="Service in Services"
     :key="Service.title"
-    class='item h-100 d-flex flex-column align-items-start justify-content-end'
+    class='item d-flex flex-column align-items-start justify-content-end'
     >
     <img class='w-100 h-100' :src="Service.img" alt="">
     <h3>{{Service.title}}</h3>
@@ -61,6 +61,7 @@ export default {
     padding-left: 23px;
     padding-right: 30px;
     padding-bottom: 43px;
+    height: 100%;
     p,h3{
       color: #fff;
     }
@@ -73,6 +74,34 @@ export default {
       left: 0;
       z-index: -1;
      }
+  }
+}
+
+@media (max-width:992px){
+  .Service{
+    height: 120vh;
+    .item{
+      width: 100%;
+      height: 29.5vh;
+      padding: 32px 16px;
+      &:nth-child(2){
+          img{
+            object-position: top;   
+          }
+        }
+      img{
+        object-fit: cover;
+      }
+      h3{
+        font-size: 28px;
+        line-height: 100%;
+      }
+      p{
+        font-size: 14px;
+        line-height: 150%;
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }  
   }
 }
 </style>

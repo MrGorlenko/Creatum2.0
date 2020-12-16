@@ -7,10 +7,9 @@
         <input class='short' type="text" placeholder="Ссылка на сайт компании">
         <input class='short' type="text" placeholder="Э-почта">
         <input class='short' type="text" placeholder="Направление">
-        <!-- <input class='big' type="text" placeholder="Text area"> -->
         <textarea class='big' placeholder="Text area"  rows="4" cols="50">
         </textarea>
-        <div class='w-100 d-flex justify-content-end'>
+        <div class='w-100 d-flex justify-content-lg-end justify-content-start'>
           <button class='button button_purple'>Отправить</button>
         </div>
         
@@ -27,37 +26,55 @@ export default {
 </script>
 
 <style lang='scss'>
+// @import 
 .GladToWork{
   min-height: 100vh;
   padding-top: 100px;
-  form{
-    padding-top: 70px;
-    .short{
-      width: 48%;
-      margin-bottom: 36px;
-      height: 60px;
-    }
-    .big{
-      width: 100%;
-      height: 120px;
-    }
-    input, textarea{
-      background: rgba(235, 235, 235, 0.5);
-      border-radius: 6px;
-      border: none;
-      outline: none;
-      padding: 18px 16px;
-      &:focus{
-        background: white;
-        border: 1px solid #6900EF;
-        box-shadow: 0px 0px 0px 3px #DEC4FF;
-      }
+  // form{
+  //   padding-top: 70px;
+  //   .short{
+  //     width: 48%;
+  //     margin-bottom: 36px;
+  //     height: 60px;
+  //   }
+  //   .big{
+  //     width: 100%;
+  //     height: 120px;
+  //   }
+  //   input, textarea{
+  //     background: rgba(235, 235, 235, 0.5);
+  //     border-radius: 6px;
+  //     border: none;
+  //     outline: none;
+  //     padding: 18px 16px;
+  //     &:focus{
+  //       background: white;
+  //       border: 1px solid #6900EF;
+  //       box-shadow: 0px 0px 0px 3px #DEC4FF;
+  //     }
 
+  //   }
+  //   button{
+  //     margin-top: 30px;
+  //     float: right;
+  //   }
+  // }
+}
+
+@media (max-width: 992px){
+  .GladToWork{
+    padding-bottom: 30px;
+    .title{
+      font-size: 34px;
     }
-    button{
-      margin-top: 30px;
-      float: right;
-    }
+    // form{
+    //   .short, .big{
+    //     width: 100%;
+    //   }
+    //   button{
+    //     width: 270px;
+    //   }
+    // }
   }
 }
 </style>

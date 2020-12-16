@@ -23,7 +23,7 @@ export default {
   name: 'Header-close',
   props: [
     'title', 'path'
-  ]
+  ],
 }
 </script>
 
@@ -50,6 +50,14 @@ export default {
   }
   h4{
     margin-bottom: 0;
+  }
+}
+
+@media (max-width: 992px){
+  .HeaderClose{
+    .row{
+      padding-left: 15px;
+    }
   }
 }
 </style>

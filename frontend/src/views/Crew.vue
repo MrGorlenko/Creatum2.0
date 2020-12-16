@@ -1,5 +1,6 @@
 <template>
   <div name=Crew id=Crew class="JoinTheCrew">
+    <div name="JoinCrew"></div>
     <h2 class="title">
       Присоединяйтесь к <span>команде</span>
     </h2>
@@ -10,13 +11,13 @@
           :key="vacancy.index"
           >
           <router-link
-          class='h-100 w-100 d-flex align-items-center justify-content-between'
+          class='h-100 w-100 d-flex align-items-lg-center align-items-start justify-content-between flex-lg-row flex-column'
           :to="/Vacancy/+index"
           >       
-            <div class="job-title d-flex align-items-center">
+            <div class="job-title">
               <p>{{vacancy.title}} <span>({{vacancy.state}})</span> </p>
             </div>
-            <p>{{vacancy.subject.toUpperCase()}}</p>
+            <p class='subject'>{{vacancy.subject.toUpperCase()}}</p>
             <div class="place d-flex align-items-center justify-content-between">
               <img src="../assets/place.png" alt="">
               {{vacancy.location}}
@@ -30,17 +31,23 @@
 </template>
 
 <script>
-import JoinTheCrew from '@/components/JoinTheCrew.vue'
+// import JoinTheCrew from '@/components/JoinTheCrew.vue'
 import { mapState } from 'vuex';
 export default {
   name: 'Crew',
   components: {
-    JoinTheCrew
+    // JoinTheCrew
   },
   computed: {
     ...mapState({
       Vacancies: state => state.Crew.Vacancies
     })
+  },
+  methods:{
+      goToBlock: function(event){
+      let link = event.target.getAttribute('href')
+      //document.querySelector(link).scrollIntoView({ behavior: 'smooth', block: 'start'}) 
+    }
   }
 }
 </script>
@@ -85,10 +92,27 @@ export default {
       background-color: rgba(235, 235, 235, 0.5);
       text-decoration: none;
     }
-
     }
-
   }
-  
+}
+
+@media (max-width: 992px){
+  .JoinTheCrew{
+    .title{
+      font-size: 34px;
+    }
+    .subject{
+      display: none;
+    }
+    .vacancy{
+      a{
+        padding: 16px;
+      }
+    }
+    .job-title{
+      text-align: start;
+      margin-bottom: 8px;
+    }
+  }
 }
 </style>

@@ -1,9 +1,22 @@
 <template>
   <div class="vacancy-item">
-      <HeaderClose
-      path="/#Crew"
-      title="Вакансия"
-      />
+    <div class="HeaderClose">
+        <div class="container h-100">
+        <div class="row h-100 align-items-center justify-content-between">
+            <div class="back d-flex justify-content-center align-items-center">
+            <a href="/#Crew" class='w-100 h-100 d-flex justify-content-center align-items-center'>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.7369 0.260319C15.3901 -0.0867735 14.8278 -0.0867727 14.481 0.26032L7.98535 6.76122L1.51664 0.292503C1.16968 -0.0544488 0.607165 -0.054449 0.260213 0.292503C-0.0867383 0.639454 -0.0867376 1.20197 0.260214 1.54893L6.72944 8.01815L0.29589 14.4569C-0.05092 14.804 -0.0509201 15.3668 0.29589 15.7139C0.642699 16.061 1.20499 16.061 1.5518 15.7139L7.98586 9.27457L14.4511 15.7398C14.798 16.0867 15.3605 16.0867 15.7075 15.7398C16.0544 15.3928 16.0544 14.8303 15.7075 14.4834L9.24177 8.01764L15.7369 1.51725C16.0837 1.17016 16.0837 0.607411 15.7369 0.260319Z" fill="#2B2D31"/>
+                </svg>
+            </a>
+            </div>
+
+            <h4>{{Vacancy[id].title}}</h4>
+
+            <div></div>
+        </div>
+        </div>
+    </div>
       <div class="container">
           <div class="top">
               <h3>Vacancies / {{Vacancy[id].subject}}</h3>
@@ -33,6 +46,23 @@
               <h4>About Creatum</h4>
               <p>{{AboutCreatum.text}}</p>
           </div>
+
+
+              <!-- <h3 class="text-left">Оставь заявку <span>сейчас!</span></h3> -->
+              <h2 class="title">Оставь заявку <span>сейчас!</span></h2>
+      <form action="" class='d-flex justify-content-between flex-wrap'>
+        <input class='short' type="text" placeholder="Полное имя">
+        <input class='short' type="text" placeholder="Э-почта">
+        <input class='w-100' type="text" placeholder="Направление">
+        <!-- <textarea class='big' placeholder="Text area"  rows="4" cols="50">
+        </textarea> -->
+        <div class='w-100 d-flex justify-content-lg-end justify-content-start'>
+          <button class='button button_purple'>Отправить</button>
+        </div>
+        
+        
+      </form>
+
       </div>
   </div>
 </template>
@@ -56,7 +86,7 @@ data() {
         post: '',
         id: this.$router.currentRoute.params['id'],
     };
-}
+},
 }
 </script>
 
@@ -64,6 +94,7 @@ data() {
 
 .vacancy-item{
     padding-top: 10vh;
+    padding-bottom: 30px;
     .top{
         margin: 32px 0 56px 0;
         h2,h3{
@@ -92,6 +123,7 @@ data() {
         width: 70%;
         background: rgba(235, 235, 235, 0.5);
         padding: 24px;
+        margin-bottom: 55px;
         h4{
             font-size: 20px;
             line-height: 24px;
@@ -105,6 +137,19 @@ data() {
             letter-spacing: 0.02em;
             color: #020202;
             text-align: start;
+        }
+    }
+}
+
+@media (max-width: 992px){
+    .vacancy-item{
+        padding-top: 3vh;
+        padding-bottom: 35px;
+        .middle p{
+            width: 100%;
+        }
+        .bottom {
+            width: 100%;
         }
     }
 }

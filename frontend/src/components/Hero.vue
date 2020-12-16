@@ -1,5 +1,5 @@
 <template>
-  <div id='hero' class="Hero align-items-center justify-content-end d-flex flex-column">
+  <div id='hero' class="Hero align-items-center justify-content-center d-flex flex-column">
 
     <img class='cube cube-1' src="../assets/cube1.png" alt="">
     <img class='cube cube-2' src="../assets/cube2.png" alt="">
@@ -53,7 +53,6 @@ export default {
       right: 120px;
     }
   }
-
   h2{
     font-size: 62px;
     line-height: 120%;
@@ -69,7 +68,6 @@ export default {
       font-weight: 800;
     }
   }
-
   hr{
     height: 1px;
     background: #E6DDF0;
@@ -79,7 +77,6 @@ export default {
     margin-top: 0;
     margin-bottom: 32px;
   }
-
   p{
     margin-bottom: 32px;
     font-size: 18px;
@@ -87,6 +84,31 @@ export default {
     text-align: center;
     color: #8D8794;
     max-width: 838px;
+  }
+}
+
+@media (max-width: 992px){
+  .Hero{
+    overflow-x: hidden;
+    h2{
+      width: 100%;
+      font-size: 35px;
+      line-height: 140%;
+      padding: 0 24px;
+      text-align: start;
+    }
+    p{
+      font-size: 14px;
+      padding: 0 24px;
+      line-height: 120%;
+    }
+    .cube{
+    &-3{
+      width: 180px;
+      bottom: 40px;
+      right: -20px;
+    }
+  }
   }
 }
 </style>

@@ -23,6 +23,10 @@
   }
 }
 
+.button_yellow_current{
+  background-color: #FBD035;
+}
+
 .button_yellow{
   background-color: #F9F9F9;
   color: #868686;
@@ -98,5 +102,54 @@
   iframe{
       width: 100%;
       height: 90vh;
+  }
+}
+
+form{
+  padding-top: 70px;
+  .short{
+    width: 48%;
+    margin-bottom: 36px;
+    height: 60px;
+  }
+  .big{
+    width: 100%;
+    height: 120px;
+  }
+  input, textarea{
+    background: rgba(235, 235, 235, 0.5);
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    padding: 18px 16px;
+    &:focus{
+      background: white;
+      border: 1px solid #6900EF;
+      box-shadow: 0px 0px 0px 3px #DEC4FF;
+    }
+
+  }
+  button{
+    margin-top: 30px;
+    float: right;
+  }
+}
+
+
+@media (max-width: 992px){
+  .cases {
+    .case{
+      width: 100%;
+      height: 35vh;
+    }
+  }
+
+  form{
+    .short, .big{
+      width: 100%;
+    }
+    button{
+      width: 270px;
+    }
   }
 }

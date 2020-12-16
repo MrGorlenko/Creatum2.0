@@ -90,6 +90,7 @@ export default {
 @media (max-width: 992px){
   .Hero{
     overflow-x: hidden;
+    height: 120vh;
     h2{
       width: 100%;
       font-size: 35px;

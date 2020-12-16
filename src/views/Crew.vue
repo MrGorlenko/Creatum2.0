@@ -10,9 +10,9 @@
           v-for='(vacancy, index) in Vacancies' 
           :key="vacancy.index"
           >
-          <router-link
+          <a
           class='h-100 w-100 d-flex align-items-lg-center align-items-start justify-content-between flex-lg-row flex-column'
-          :to="/Vacancy/+index"
+          :href="/Vacancy/+index"
           >       
             <div class="job-title">
               <p>{{vacancy.title}} <span>({{vacancy.state}})</span> </p>
@@ -22,7 +22,7 @@
               <img src="../assets/place.png" alt="">
               {{vacancy.location}}
             </div>
-          </router-link>
+          </a>
 
         </div>
       </div>
@@ -31,13 +31,9 @@
 </template>
 
 <script>
-// import JoinTheCrew from '@/components/JoinTheCrew.vue'
 import { mapState } from 'vuex';
 export default {
   name: 'Crew',
-  components: {
-    // JoinTheCrew
-  },
   computed: {
     ...mapState({
       Vacancies: state => state.Crew.Vacancies
@@ -105,6 +101,7 @@ export default {
       display: none;
     }
     .vacancy{
+      // padding-top: 12vh;
       a{
         padding: 16px;
       }

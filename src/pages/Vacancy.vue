@@ -48,14 +48,11 @@
           </div>
 
 
-              <!-- <h3 class="text-left">Оставь заявку <span>сейчас!</span></h3> -->
               <h2 class="title">Оставь заявку <span>сейчас!</span></h2>
       <form action="" class='d-flex justify-content-between flex-wrap'>
         <input class='short' type="text" placeholder="Полное имя">
         <input class='short' type="text" placeholder="Э-почта">
         <input class='w-100' type="text" placeholder="Направление">
-        <!-- <textarea class='big' placeholder="Text area"  rows="4" cols="50">
-        </textarea> -->
         <div class='w-100 d-flex justify-content-lg-end justify-content-start'>
           <button class='button button_purple'>Отправить</button>
         </div>
@@ -143,13 +140,19 @@ data() {
 
 @media (max-width: 992px){
     .vacancy-item{
-        padding-top: 3vh;
+        padding-top: 12vh;
         padding-bottom: 35px;
         .middle p{
             width: 100%;
         }
         .bottom {
             width: 100%;
+        }
+    }
+    .HeaderClose{
+        h4{
+            font-size: 20px;
+            line-height: 24px;
         }
     }
 }

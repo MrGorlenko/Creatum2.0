@@ -111,7 +111,7 @@ export default {
           perPage:3,
           breakpoints: {
             993: {
-              fixedWidth  : 85,
+              fixedWidth  : 95,
               focus    : 'center',
 	            perPage  : 3,
 	            trimSpace: false,
@@ -179,6 +179,9 @@ export default {
 @media (max-width:992px){
   .HowWeDo{
     overflow-x: hidden;
+    .slider-navigation{
+      width: 100%;
+    }
     .cell p{
       font-weight: 500;
       font-size: 16px;

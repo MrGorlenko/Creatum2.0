@@ -131,7 +131,7 @@ export default {
         perPage:3,
         breakpoints: {
           993: {
-              fixedWidth  : 85,
+              fixedWidth  : 95,
               focus    : 'center',
 	            perPage  : 3,
 	            trimSpace: false,

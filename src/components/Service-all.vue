@@ -8,9 +8,12 @@
     <img class='w-100 h-100' :src="Service.img" alt="">
     <h3>{{Service.title}}</h3>
     <p>{{Service.descripton}}</p>
-    <router-link :to="Service.url">
+    <!-- <router-link :to="Service.url">
       <button class='button button_purple'>Подробнее</button>
-    </router-link>
+    </router-link> -->
+    <a :href="Service.url">
+      <button class='button button_purple'>Подробнее</button>
+    </a>
     </div>
   </div>
 </template>
@@ -79,11 +82,12 @@ export default {
 
 @media (max-width:992px){
   .Service{
-    height: 120vh;
+    height: auto;
     .item{
       width: 100%;
-      height: 29.5vh;
+      height: 245px;
       padding: 32px 16px;
+      margin-bottom: 3px;
       &:nth-child(2){
           img{
             object-position: top;   
@@ -100,6 +104,7 @@ export default {
         font-size: 14px;
         line-height: 150%;
         color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 40px;
       }
     }  
   }

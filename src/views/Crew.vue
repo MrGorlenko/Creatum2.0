@@ -1,11 +1,11 @@
 <template>
   <div name=Crew id=Crew class="JoinTheCrew">
     <div name="JoinCrew"></div>
-    <h2 class="title">
+    <h2 class="title wow animate__animated animate__fadeInRight">
       Присоединяйтесь к <span>команде</span>
     </h2>
     <div class="container">
-      <div class="vacancies">
+      <div class="vacancies wow animate__animated animate__fadeInLeft">
         <div class="vacancy d-flex align-items-center justify-content-between" 
           v-for='(vacancy, index) in Vacancies' 
           :key="vacancy.index"
@@ -42,7 +42,6 @@ export default {
   methods:{
       goToBlock: function(event){
       let link = event.target.getAttribute('href')
-      //document.querySelector(link).scrollIntoView({ behavior: 'smooth', block: 'start'}) 
     }
   }
 }

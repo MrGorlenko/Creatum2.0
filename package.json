@@ -8,6 +8,8 @@
   },
   "dependencies": {
     "@splidejs/vue-splide": "^0.3.5",
+    "animate.css": "^4.1.1",
+    "animejs": "^3.2.1",
     "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
     "bootstrap-vue": "^2.19.0",
@@ -21,7 +23,9 @@
     "vue-router": "^3.2.0",
     "vue-scrollmagic": "^1.2.0",
     "vue-scrollto": "^2.20.0",
-    "vuex": "^3.6.0"
+    "vue-wow": "^1.2.0",
+    "vuex": "^3.6.0",
+    "wow.js": "^1.2.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

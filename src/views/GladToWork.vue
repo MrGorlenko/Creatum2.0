@@ -1,7 +1,7 @@
 <template>
   <div id='GladToWork' class="GladToWork">
     <div class="container">
-      <h2 class="title">Мы рады работать <span>с тобой!</span></h2>
+      <h2 class="title wow animate__animated animate__fadeIn">Мы рады работать <span>с тобой!</span></h2>
       <form action="" class='d-flex justify-content-between flex-wrap'>
         <input class='short' type="text" placeholder="Полное имя">
         <input class='short' type="text" placeholder="Ссылка на сайт компании">

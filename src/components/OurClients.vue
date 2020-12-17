@@ -1,6 +1,6 @@
 <template>
   <div class="OurClients">
-    <h2 class="title">
+    <h2 class="title wow animate__animated animate__fadeIn">
       Наши <span>клиенты</span>
     </h2>
       <div class="container p-lg-2 p-0">

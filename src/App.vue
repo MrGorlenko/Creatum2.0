@@ -1,5 +1,9 @@
 <template>
   <div id="app">
+      <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <div id="nav" class='d-lg-flex d-none w-100 justify-content-between align-items-center'>
       <router-link to='/'>
         <svg width="44" height="40" viewBox="0 0 44 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -21,7 +25,7 @@
           class='button button_yellow' href="#ForWho">For who</button></li>
           <li><button
           :class="{active: scrollPosition >= actualHeight*4.6 && scrollPosition < actualHeight*5.5}" @click='goToBlock'
-           class='button button_yellow' href="#Crew">Crew</button></li>
+           class='button button_yellow' href="#Crew">Join the crew</button></li>
         </ul>
       </div>
       <button @click='goToBlock' class='d-block request button button_purple' href="#GladToWork">Заявка</button>
@@ -58,7 +62,7 @@ export default {
     }
   },
   components:{
-    MobileMenu
+    MobileMenu,
   },
 
   methods: {
@@ -84,6 +88,15 @@ export default {
   },
   mounted() {
     window.addEventListener('scroll', this.updateScroll);
+    // new wow.init();
+    // var scriptTag = document.createElement("script");
+    // scriptTag.src = 'https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js';
+    // document.getElementsByTagName('head')[0].appendChild(scriptTag);
+    // var wowScript = document.createElement("script");
+    // innerScript = 'new WOW.init();';
+    // wowScript.innerHTML = 'new WOW().init();'
+    // document.getElementsByTagName('body')[0].appendChild(wowScript);
+
   },
   destroy() {
     window.removeEventListener('scroll', this.updateScroll)

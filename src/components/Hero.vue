@@ -5,20 +5,20 @@
     <img class='cube cube-2' src="../assets/cube2.png" alt="">
     <img class='cube cube-3' src="../assets/cube3.png" alt="">
 
-    <h2>
+    <h2 class='wow animate__animated animate__fadeInLeft'>
       Мы <span>digital-агентство:</span>
 создаем проекты, приносящие <span>прибыль</span> нашим клиентам.
     </h2>
 
     <hr>
 
-    <p>
+    <p class='wow animate__animated animate__fadeInRight'>
       В основе наших решений всегда заложено выполнение задач. Мы никогда не делаем «красиво» просто так — мы делаем «красиво», которое зарабатывает вам деньги
     </p>
 
     <hr>
 
-    <p>
+    <p class='wow animate__animated animate__fadeInLeft'>
       Мы работаем с 20XX-го года и постоянно ищем новаторские решения
     </p>
 
@@ -26,8 +26,45 @@
 </template>
 
 <script>
+import anime from 'animejs'
 export default {
-  name: 'Hero'
+  name: 'Hero',
+  components: {
+    anime
+  },
+  mounted(){
+   
+    anime({
+      targets: 'h2',
+    }),
+    anime({
+      targets: '.cube-1',
+      translateY: [0, -5],
+      daruation: 10000,
+      loop: true,
+      direction: 'alternate',
+      easing: 'linear',
+      rotate: 5
+    }),
+    anime({
+      targets: '.cube-2',
+      translateY: [0, -15],
+      daruation: 11000,
+      loop: true,
+      direction: 'alternate',
+      easing: 'linear',
+      rotate: -9
+    }),
+    anime({
+      targets: '.cube-3',
+      translateY: [0, -10],
+      daruation: 8000,
+      loop: true,
+      direction: 'alternate',
+      easing: 'linear',
+      rotate: 10
+    })
+  }
 }
 </script>
 

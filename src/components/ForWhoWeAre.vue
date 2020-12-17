@@ -1,9 +1,9 @@
 <template>
   <div class="ForWhoWeAre">
-    <h2 class="title">
+    <h2 class="title wow animated__animated animated__fadeIn">
       Кому <span> мы подойдем</span>
     </h2>
-    <div class="slide-wrapper">
+    <div class="slide-wrapper wow animated__animated animated__fadeInUp">
       <splide :options="options">
         <splide-slide
         v-for="item in forWho"
@@ -21,23 +21,24 @@
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 import { mapState } from 'vuex';
+import anime from 'animejs';
 export default {
   name: 'ForWhoWeAre',
   components: {
     Splide,
-    SplideSlide
+    SplideSlide,
+    anime
   },
   data() {
     return {
       options: {
           type: 'loop',
-          rewind : false,
           width  : '100%',
           gap    : '3rem',
           arrows : false, 
           pagination  : false,
           perPage   : 2.6,
-          perMove   : 3,
+          perMove   : 1,
           breakpoints : {
             992: {
               gap : '1rem',
@@ -53,7 +54,7 @@ export default {
     ...mapState({
       forWho: state => state.ForWho.forWho
     })
-  }
+  },
 }
 </script>
 
@@ -65,8 +66,8 @@ export default {
     margin-bottom: 117px;
   }
   .slide-wrapper{
-    width: 80%;
-    margin-left: 20%;
+    width: 100%;
+    // margin-left: 20%;
   }
   h3{
     font-weight: 800;
@@ -86,10 +87,8 @@ export default {
 
 @media (max-width:992px){
   .ForWhoWeAre{
-    // overflow: hidden;
     .slide-wrapper{
-      width: 95%;
-      margin-left: 5%;
+      width: 100%;
     }
   }
 }

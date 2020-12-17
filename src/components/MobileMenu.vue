@@ -27,7 +27,7 @@
           <li><button  
           class='' href="#ForWho" @click="mobileGoToBlock">For who</button></li>
           <li><button
-           class='' href="#Crew" @click="mobileGoToBlock">Crew</button></li>
+           class='' href="#Crew" @click="mobileGoToBlock">Join the crew</button></li>
         </ul>
     </div>
   </div>

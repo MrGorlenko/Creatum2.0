@@ -1,10 +1,10 @@
 <template>
   <div id="HowWeDo" class="HowWeDo">
-    <h2 class='title'>How <span>we do</span></h2>
+    <h2 class='wow animate__animated animate__fadeIn title'>How <span>we do</span></h2>
     <img class='cube' src="../assets/cube4.png" alt="">
     <div class="container p-lg-2 p-0">
 
-      <div class="slider-navigation">
+      <div class="slider-navigation wow animate__animated animate__fadeInLeft">
         <splide
         :options="secondaryOptions"
         ref="secondary"
@@ -26,7 +26,7 @@
 
       <splide :options="options"
       ref="primary"
-      class='p-lg-0 p-2'
+      class='p-lg-0 p-2 wow animate__animated animate__fadeInRight'
       >
         <splide-slide>          
         <div class="cell d-flex align-items-center justify-content-between"

@@ -88,15 +88,13 @@ export default {
   },
   mounted() {
     window.addEventListener('scroll', this.updateScroll);
-    // new wow.init();
-    // var scriptTag = document.createElement("script");
-    // scriptTag.src = 'https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js';
-    // document.getElementsByTagName('head')[0].appendChild(scriptTag);
-    // var wowScript = document.createElement("script");
-    // innerScript = 'new WOW.init();';
-    // wowScript.innerHTML = 'new WOW().init();'
-    // document.getElementsByTagName('body')[0].appendChild(wowScript);
-
+    let head = document.getElementsByTagName('head')
+    console.log(head.children)
+    // var linkTag = document.createElement("link");
+    // linkTag.rel = 'icon'
+    // linkTag.href = '/assets/favicon.ico'
+    // document.getElementsByTagName('head')[0].appendChild(linkTag);
+    // <link rel="icon" href="<%= BASE_URL %>favicon.ico">
   },
   destroy() {
     window.removeEventListener('scroll', this.updateScroll)
@@ -134,9 +132,6 @@ export default {
 }
 
 .navigation{
-  // position: fixed;
-  // top:0;
-  // left:0;
   ul{
     margin-bottom: 0;
   }
@@ -156,7 +151,6 @@ export default {
   }
   a{
     width: 24.9%;
-    // margin-right: 8px;
 
     &:last-child{
       margin-right: 0;

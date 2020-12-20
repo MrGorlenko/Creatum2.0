@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Main from '../views/Main.vue'
-// import HowWeDo from '../views/HowWeDo.vue'
 
 Vue.use(VueRouter)
 
@@ -48,7 +47,6 @@ const routes = [
     component: () => import('../pages/WEBUIcase.vue'),
     props: true
   },
-  //
   {
     path: '/MobileUIs',
     name: 'MobileUIs',
@@ -60,7 +58,6 @@ const routes = [
     component: () => import('../pages/MobileUIcase.vue'),
     props: true
   },
-  //
   {
     path: '/BrandingCases',
     name: 'BrandingCases',
@@ -85,5 +82,13 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 })
+
+
+const DEFAULT_TITLE = 'Creatum';
+router.afterEach((to, from) => {
+    Vue.nextTick(() => {
+        document.title = to.meta.title || DEFAULT_TITLE;
+    });
+});
 
 export default router

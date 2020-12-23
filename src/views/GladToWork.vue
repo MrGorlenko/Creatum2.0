@@ -2,32 +2,65 @@
   <div id='GladToWork' class="GladToWork">
     <div class="container">
       <h2 class="title wow animate__animated animate__fadeIn">Мы рады работать <span>с тобой!</span></h2>
-      <form action="" class='d-flex justify-content-between flex-wrap'>
-        <input class='short' type="text" placeholder="Полное имя">
-        <input class='short' type="text" placeholder="Ссылка на сайт компании">
-        <input class='short' type="text" placeholder="Э-почта">
-        <input class='short' type="text" placeholder="Направление">
-        <textarea class='big' placeholder="Text area"  rows="4" cols="50">
+      <form action="" class='d-flex justify-content-between flex-wrap' @submit.prevent="submitForm" method="post">
+        <input class='short' type="text" placeholder="Полное имя" v-model="full_name">
+        <input class='short' type="text" placeholder="Ссылка на сайт компании" v-model="url">
+        <input class='short' type="text" placeholder="Э-почта" v-model="email">
+        <input class='short' type="text" placeholder="Направление" v-model="industry">
+        <textarea class='big' placeholder="Text area" rows="4" cols="50" v-model="text">
         </textarea>
         <div class='w-100 d-flex justify-content-lg-end justify-content-start'>
-          <button class='button button_purple'>Отправить</button>
+          <button class='button button_purple' type="submit">Отправить</button>
         </div>
-        
-        
+
+
       </form>
     </div>
   </div>
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
-  name: 'GladToWork'
+  name: 'GladToWork',
+  data() {
+    return {
+      full_name: null,
+      url: null,
+      email: null,
+      industry: null,
+      text: null,
+    }
+  },
+  methods: {
+    submitForm() {
+      axios({
+        method: 'post',
+        url: 'http://127.0.0.1:8001/api/customers/',
+        data: {
+          full_name: this.full_name,
+          url: this.url,
+          email: this.email,
+          industry: this.industry,
+          text: this.text
+        }
+
+      })
+          .then(res => console.log(res))
+          .catch((error) => {
+            console.log(error)
+          })
+    }
+  }
 }
+
+
 </script>
 
 <style lang='scss'>
 // @import 
-.GladToWork{
+.GladToWork {
   min-height: 100vh;
   padding-top: 100px;
   // form{
@@ -61,12 +94,14 @@ export default {
   // }
 }
 
-@media (max-width: 992px){
-  .GladToWork{
+@media (max-width: 992px) {
+  .GladToWork {
     padding-bottom: 30px;
-    .title{
+
+    .title {
       font-size: 34px;
     }
+
     // form{
     //   .short, .big{
     //     width: 100%;

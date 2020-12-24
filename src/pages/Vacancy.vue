@@ -95,7 +95,7 @@ data() {
     applyForm() {
       axios({
         method: 'post',
-        url: 'http://mrgorlenko.pythonanywhere.com/api/employees/',
+        url: 'https://mrgorlenko.pythonanywhere.com/api/employees/',
         data: {
           full_name: this.full_name,
           email: this.email,

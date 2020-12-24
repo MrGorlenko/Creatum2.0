@@ -36,7 +36,7 @@ export default {
     submitForm() {
       axios({
         method: 'post',
-        url: 'http://mrgorlenko.pythonanywhere.com/api/customers/',
+        url: 'https://mrgorlenko.pythonanywhere.com/api/customers/',
         data: {
           full_name: this.full_name,
           url: this.url,

@@ -48,11 +48,11 @@
           </div>
 
 
-              <h2 class="title">Оставь заявку <span>сейчас!</span></h2>
-      <form action="" class='d-flex justify-content-between flex-wrap'>
-        <input class='short' type="text" placeholder="Полное имя">
-        <input class='short' type="text" placeholder="Э-почта">
-        <input class='w-100' type="text" placeholder="Направление">
+        <h2 class="title">Оставь заявку <span>сейчас!</span></h2>
+        <form action="" class='d-flex justify-content-between flex-wrap' @submit.prevent="applyForm" method="post">
+        <input class='short' type="text" placeholder="Полное имя" v-model="full_name">
+        <input class='short' type="text" placeholder="Э-почта" v-model="email">
+        <input class='w-100' type="text" placeholder="Направление" v-model="field">
         <div class='w-100 d-flex justify-content-lg-end justify-content-start'>
           <button class='button button_purple'>Отправить</button>
         </div>
@@ -65,6 +65,7 @@
 </template>
 
 <script>
+import axios from "axios";
 import HeaderClose from '@/components/Header-close.vue'
 import { mapState } from 'vuex';
 export default {
@@ -82,11 +83,31 @@ data() {
     return {
         post: '',
         id: this.$router.currentRoute.params['id'],
+        full_name: null,
+        email: null,
+        field: null,
     };
 },
   mounted () {
   window.scrollTo(0, 0);
 },
+  methods: {
+    applyForm() {
+      axios({
+        method: 'post',
+        url: 'http://mrgorlenko.pythonanywhere.com/api/employees/',
+        data: {
+          full_name: this.full_name,
+          email: this.email,
+          field: this.field,
+        }
+      })
+          .then(res => console.log(res))
+          .catch((error) => {
+            console.log(error)
+          })
+    }
+  }
 }
 </script>
 

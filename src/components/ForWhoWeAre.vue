@@ -60,7 +60,7 @@ export default {
           perPage   : 2.6,
           direction  : 'ttb',
           perMove   : 1,
-          heightRatio: 1.2
+          heightRatio: 1
         },
     }
   },

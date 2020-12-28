@@ -3,7 +3,18 @@
     <h2 class="title wow animated__animated animated__fadeIn">
       Кому <span> мы подойдем</span>
     </h2>
-    <div class="slide-wrapper wow animated__animated animated__fadeInUp">
+    <div class="slide-wrapper d-lg-none slide-wrapped_mobile wow animated__animated animated__fadeInUp">
+      <splide :options="options1">
+        <splide-slide
+        v-for="item in forWho"
+        :key=item.title
+        >
+          <h3>{{item.title}}</h3>
+          <p>{{item.paragraph}}</p>
+        </splide-slide>
+      </splide>
+    </div>
+    <div class="slide-wrapper d-lg-block d-none  wow animated__animated animated__fadeInUp">
       <splide :options="options">
         <splide-slide
         v-for="item in forWho"
@@ -39,14 +50,17 @@ export default {
           pagination  : false,
           perPage   : 2.6,
           perMove   : 1,
-          breakpoints : {
-            992: {
-              gap : '1rem',
-	            perPage    : 1.5,
-              
-            }
-          },
-          
+        },
+        options1: {
+          type: 'loop',
+          width  : '100%',
+          gap    : '3rem',
+          arrows : false, 
+          pagination  : false,
+          perPage   : 2.6,
+          direction  : 'ttb',
+          perMove   : 1,
+          heightRatio: 1.2
         },
     }
   },
@@ -67,7 +81,6 @@ export default {
   }
   .slide-wrapper{
     width: 100%;
-    // margin-left: 20%;
   }
   h3{
     font-weight: 800;
@@ -85,10 +98,20 @@ export default {
   }
 }
 
+@media(min-width: 992px){
+  .slide-wrapped_mobile{
+    display: none;
+  }
+}
+
 @media (max-width:992px){
   .ForWhoWeAre{
+    h2{
+      margin-bottom: 65px;
+    }
     .slide-wrapper{
-      width: 100%;
+      width: 90%;
+      margin-left: 5%;
     }
   }
 }

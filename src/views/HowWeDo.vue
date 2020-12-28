@@ -35,6 +35,14 @@
         <div class="time">
           <span>{{SMM.time.substring(0,2)}}</span>
           {{SMM.time.replace(/[0-9]/g, '')}}
+          <!-- <span class='submit'></span> -->
+        </div>
+        </div>
+        <div class="cell cell_total d-flex align-items-center justify-content-between">
+        <p>Итого</p>
+        <div class="time">
+          <span>8</span>
+          дней
         </div>
         </div>
       </splide-slide>
@@ -47,6 +55,13 @@
           {{web_site.time.replace(/[0-9]/g, '')}}
         </div>
         </div>
+        <div class="cell cell_total d-flex align-items-center justify-content-between">
+        <p>Итого</p>
+        <div class="time">
+          <span>10</span>
+          дней
+        </div>
+        </div>
       </splide-slide>
       <splide-slide>
         <div class="cell d-flex align-items-center justify-content-between"
@@ -57,6 +72,13 @@
           {{mobile_app.time.replace(/[0-9]/g, '')}}
         </div>
         </div>
+        <div class="cell cell_total d-flex align-items-center justify-content-between">
+        <p>Итого</p>
+        <div class="time">
+          <span>8</span>
+          дней
+        </div>
+        </div>
       </splide-slide>
       <splide-slide>
         <div class="cell d-flex align-items-center justify-content-between"
@@ -65,6 +87,13 @@
         <div class="time">
           <span>{{performance.time.substring(0,2)}}</span>
           {{performance.time.replace(/[0-9]/g, '')}}
+        </div>
+        </div>
+        <div class="cell cell_total d-flex align-items-center justify-content-between">
+        <p>Итого</p>
+        <div class="time">
+          <span>84</span>
+          дня
         </div>
         </div>
       </splide-slide>
@@ -149,6 +178,12 @@ export default {
   }
   h2{
     margin-bottom: 40px;
+  }
+  .cell_total{
+    background: #6709DE !important;
+    p{
+      color:#fff;
+    }
   }
   .cell{
     background: rgba(235, 235, 235, 0.5);

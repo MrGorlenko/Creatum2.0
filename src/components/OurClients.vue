@@ -168,7 +168,10 @@ export default {
   .icon-cell{
     width: 150px;
     height: 150px;
-  }
+    img{
+      width:80%;
+    }
+}
   .grey-block{
     width: 150px;
     height: 150px;
@@ -181,6 +184,7 @@ export default {
     img{
       z-index: -1;
       opacity: .4;
+      width:80%;
     }
   }
 }

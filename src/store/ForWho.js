@@ -6,24 +6,20 @@ const ForWho = {
         forWho: [
             {
               title: 'Стартапы',
-              paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu mattis tristique est at tellus. Aliquam eu aliquam vivamus platea vivamus augue faucibus. Pretium commodo massa nibh cras suspendisse porttitor iaculis ut proin. '
+              paragraph: 'протестировать MVP и понять экономику за привлеченные конверсии.'
             },
             {
-              title: 'Креатив',
-              paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu mattis tristique est at tellus. Aliquam eu aliquam vivamus platea vivamus augue faucibus. Pretium commodo massa nibh cras suspendisse porttitor iaculis ut proin. '
+              title: 'Малый и средний бизнес',
+              paragraph: 'делегировать процессы по маркетингу и контенту, чтобы освободить время и заниматься масштабированием. '
             },
             {
-              title: 'Веб-разработка',
-              paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu mattis tristique est at tellus. Aliquam eu aliquam vivamus platea vivamus augue faucibus. Pretium commodo massa nibh cras suspendisse porttitor iaculis ut proin. '
+              title: 'Digital-агентства',
+              paragraph: 'пополнить производственный ресурс дополнительными специалистами. Расширить спектр предоставляемых клиенту услуг. Наладить процесс обмена опытом между специалистами вашего и нашего агентства.'
             },
             {
-              title: 'Еще вот для вас',
-              paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu mattis tristique est at tellus. Aliquam eu aliquam vivamus platea vivamus augue faucibus. Pretium commodo massa nibh cras suspendisse porttitor iaculis ut proin. '
-            },
-            {
-              title: 'И для вас',
-              paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu mattis tristique est at tellus. Aliquam eu aliquam vivamus platea vivamus augue faucibus. Pretium commodo massa nibh cras suspendisse porttitor iaculis ut proin. '
-            },            
+              title: 'Крупный и корпоративный бизнес',
+              paragraph: ' информационная поддержка ваших целевых активностей и развитие HR направления. Трансляция внутренних ценностей компании и создание канала коммуникации с клиентской базой. '
+            },           
         ],
     },
     mutations: {

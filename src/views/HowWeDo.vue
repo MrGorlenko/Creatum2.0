@@ -13,10 +13,10 @@
           SMM
         </splide-slide>
         <splide-slide >
-          Web Site
+          Websites & Apps
         </splide-slide>
         <splide-slide >
-          Mobile app
+          Branding
         </splide-slide>
         <splide-slide >
           Performance
@@ -41,41 +41,41 @@
         <div class="cell cell_total d-flex align-items-center justify-content-between">
         <p>Итого</p>
         <div class="time">
-          <span>8</span>
+          <span>52</span>
+          дня
+        </div>
+        </div>
+      </splide-slide>
+      <splide-slide>
+        <div class="cell d-flex align-items-center justify-content-between"
+        v-for='web_app in Web_apps' :key="web_app.title">
+        <p>{{web_app.title}}</p>
+        <div class="time">
+          <span>{{web_app.time.substring(0,2)}}</span>
+          {{web_app.time.replace(/[0-9]/g, '')}}
+        </div>
+        </div>
+        <div class="cell cell_total d-flex align-items-center justify-content-between">
+        <p>Итого</p>
+        <div class="time">
+          <span>70</span>
           дней
         </div>
         </div>
       </splide-slide>
       <splide-slide>
         <div class="cell d-flex align-items-center justify-content-between"
-        v-for='web_site in Web_sites' :key="web_site.title">
-        <p>{{web_site.title}}</p>
+        v-for="branding in Brandings" :key="branding.title">
+          <p>{{branding.title}}</p>
         <div class="time">
-          <span>{{web_site.time.substring(0,2)}}</span>
-          {{web_site.time.replace(/[0-9]/g, '')}}
+          <span>{{branding.time.substring(0,2)}}</span>
+          {{branding.time.replace(/[0-9]/g, '')}}
         </div>
         </div>
         <div class="cell cell_total d-flex align-items-center justify-content-between">
         <p>Итого</p>
         <div class="time">
-          <span>10</span>
-          дней
-        </div>
-        </div>
-      </splide-slide>
-      <splide-slide>
-        <div class="cell d-flex align-items-center justify-content-between"
-        v-for="mobile_app in Mobile_apps" :key="mobile_app.title">
-          <p>{{mobile_app.title}}</p>
-        <div class="time">
-          <span>{{mobile_app.time.substring(0,2)}}</span>
-          {{mobile_app.time.replace(/[0-9]/g, '')}}
-        </div>
-        </div>
-        <div class="cell cell_total d-flex align-items-center justify-content-between">
-        <p>Итого</p>
-        <div class="time">
-          <span>8</span>
+          <span>29</span>
           дней
         </div>
         </div>
@@ -92,7 +92,7 @@
         <div class="cell cell_total d-flex align-items-center justify-content-between">
         <p>Итого</p>
         <div class="time">
-          <span>84</span>
+          <span>24</span>
           дня
         </div>
         </div>
@@ -132,7 +132,7 @@ export default {
 		      gap         : '1rem',
 		      pagination  : false,
 		      fixedWidth  : 103,
-          fixedHeight : 38,
+          fixedHeight : 58,
 		      focus       : 0,
 		      isNavigation: true,
           updateOnMove: true,
@@ -146,7 +146,10 @@ export default {
 	            trimSpace: false,
               
             }
-          }
+          },
+        classes: {
+          page: 'dfef'
+        }
         },
         count : 0,
       };
@@ -157,8 +160,8 @@ export default {
     computed: {
       ...mapState({
         SMMs: state => state.HowWeDo.SMMs,
-        Web_sites: state => state.HowWeDo.Web_sites,
-        Mobile_apps: state => state.HowWeDo.Mobile_apps,
+        Web_apps: state => state.HowWeDo.Web_apps,
+        Brandings: state => state.HowWeDo.Brandings,
         Performances: state => state.HowWeDo.Performances
       })
     }
@@ -208,6 +211,13 @@ export default {
   .swiper-container {
     width: 600px;
     height: 300px;
+}
+#splide01{
+  ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 }
 

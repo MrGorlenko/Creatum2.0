@@ -40,6 +40,24 @@
             <p>
                {{Vacancy[id].description}}
             </p>
+            <ul class='d-flex flex-column align-items-start pl-2'>
+                <p style='font-weight: bolder;'>Обязанности:</p>
+                <li v-for='duty in Vacancy[id].duties' :key='duty'>
+                    {{duty}}
+                </li>
+            </ul>
+             <ul class='d-flex flex-column align-items-start pl-2'>
+                <p style='font-weight: bolder;'>Требования:</p>
+                <li v-for='demand in Vacancy[id].demands' :key='demand'>
+                    {{demand}}
+                </li>
+            </ul>
+            <ul class='d-flex flex-column align-items-start pl-2'>
+                <p style='font-weight: bolder;'>Условия:</p>
+                <li v-for='condition in Vacancy[id].conditions' :key='condition'>
+                    {{condition}}
+                </li>
+            </ul>
           </div>
 
           <div class="bottom">

@@ -6,7 +6,7 @@ const OurClients = {
         icons: [
             {
               theme: 'SMM',
-              img: require('../assets/vector.png')
+              img: require('../assets/SMMCases/2.jpeg')
             },
             {
               theme: 'Web-sites',
@@ -14,11 +14,11 @@ const OurClients = {
             },
             {
               theme: 'SMM',
-              img: require('../assets/xbox.png')
+              img: require('../assets/SMMCases/1.png')
             },
             {
               theme: 'SMM',
-              img: require('../assets/vector.png')
+              img: require('../assets//SMMCases/3.png')
             },
             {
               theme: 'Mobile-app',
@@ -26,7 +26,7 @@ const OurClients = {
             },
             {
               theme: 'SMM',
-              img: require('../assets/xbox.png')
+              img: require('../assets/SMMCases/4.png')
             },
             {
               theme: 'Past',
@@ -34,7 +34,7 @@ const OurClients = {
             },
             {
               theme: 'SMM',
-              img: require('../assets/vector.png')
+              img: require('../assets/SMMCases/5.jpg')
             },
             {
               theme: 'Mobile-app',
@@ -45,8 +45,8 @@ const OurClients = {
               img: require('../assets/stripe.png')
             },
             {
-              theme: 'Past',
-              img: require('../assets/stripe.png')
+              theme: 'SMM',
+              img: require('../assets/SMMCases/6.png')
             },
             {
               theme: 'Web-sites',
@@ -57,16 +57,16 @@ const OurClients = {
               img: require('../assets/stripe.png')
             },
             {
-              theme: 'Mobile-app',
-              img: require('../assets/youtube.png')
+              theme: 'SMM',
+              img: require('../assets/SMMCases/7.jpeg')
             },
             {
               theme: 'Branding',
               img: require('../assets/fb_messenger.png')
             },
             {
-              theme: 'Mobile-app',
-              img: require('../assets/youtube.png')
+              theme: 'SMM',
+              img: require('../assets/SMMCases/11.png')
             },
             {
               theme: 'Branding',
@@ -77,12 +77,20 @@ const OurClients = {
               img: require('../assets/fb_messenger.png')
             },
             {
-              theme: 'Past',
-              img: require('../assets/fb_messenger.png')
+              theme: 'SMM',
+              img: require('../assets/SMMCases/8.jpeg')
             },
             {
               theme: 'Past',
               img: require('../assets/youtube.png')
+            },
+            {
+              theme: 'SMM',
+              img: require('../assets/SMMCases/9.jpg')
+            },
+            {
+              theme: 'SMM',
+              img: require('../assets/SMMCases/10.jpg')
             },
     
           ]

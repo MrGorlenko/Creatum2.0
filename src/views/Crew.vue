@@ -64,6 +64,10 @@ export default {
     margin-bottom: 90px;
   }
   .vacancy{
+    .job-title{
+      width: 250px;
+      text-align: start;
+    }
     
     cursor: pointer;
     a{
@@ -101,6 +105,9 @@ export default {
     }
     .vacancy{
       // padding-top: 12vh;
+      .job-title{
+        width: auto;
+      }
       a{
         padding: 16px;
       }

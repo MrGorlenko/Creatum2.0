@@ -26,28 +26,29 @@ export default {
       Services: [
         {
           title: 'SMM',
-          descripton: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa amet venenatis, fusce donec blandit tortor, congue ut.',
+          descripton: 'Создаем уникальный контент, чтобы охватить как можно больше целевых пользователей. Повышаем вовлеченности и лояльность аудиторий.',
           img: require('../assets/SMM.png'),
           url: '/SMMcases'
         },
         {
-          title: 'Web UI',
-          descripton: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa amet venenatis, fusce donec blandit tortor, congue ut.',
+          title: 'Performance',
+          descripton: 'Настраиваем прибыльные рекламные кампании через facebook и google ads. Фокусируемся на высоком ROAS, и положительном  ROMI.',
           img: require('../assets/WebUI.png'),
           url: '/WEBUIs'
         },
         {
-          title: 'Mobile UI',
-          descripton: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa amet venenatis, fusce donec blandit tortor, congue ut.',
+          title: 'Branding',
+          descripton: 'Придумываем универсальные сочетания Логотипов и шрифтов, выделяющие из толпы. Прорабатываем расположение на атрибутике разного формата.',
+          img: require('../assets/Branding.png'),
+          url: '/BrandingCases'
+        },
+        {
+          title: 'Websites & Apps',
+          descripton: 'Разрабатываем нативные сайты и мобильные приложения с фокусом на оптимальные пользовательские интерфейсы. Производим аудит и редизайн существующих решений.',
           img: require('../assets/MobileUI.png'),
           url: '/MobileUIs'
         },
-        {
-          title: 'Branding',
-          descripton: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa amet venenatis, fusce donec blandit tortor, congue ut.',
-          img: require('../assets/Branding.png'),
-          url: '/BrandingCases'
-        }
+        
       ]
     }
   }

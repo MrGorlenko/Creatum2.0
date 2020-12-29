@@ -60,7 +60,7 @@ export default {
           perPage   : 2.6,
           direction  : 'ttb',
           perMove   : 1,
-          heightRatio: 1
+          height: 'auto'
         },
     }
   },
@@ -106,6 +106,7 @@ export default {
 
 @media (max-width:992px){
   .ForWhoWeAre{
+    overflow: hidden;
     h2{
       margin-bottom: 65px;
     }

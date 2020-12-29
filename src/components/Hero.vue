@@ -129,7 +129,7 @@ export default {
   .Hero{
     overflow-x: hidden;
     height: 110vh;
-    // padding-top: 25vh;
+    padding-top: 25vh;
     h2{
       width: 100%;
       font-size: 35px;

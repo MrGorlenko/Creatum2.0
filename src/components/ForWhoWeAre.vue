@@ -4,15 +4,12 @@
       Кому <span> мы подойдем</span>
     </h2>
     <div class="slide-wrapper d-lg-none slide-wrapped_mobile wow animated__animated animated__fadeInUp">
-      <splide :options="options1">
-        <splide-slide
-        v-for="item in forWho"
-        :key=item.title
-        >
+      <div
+       v-for="item in forWho"
+        :key=item.title>
           <h3>{{item.title}}</h3>
           <p>{{item.paragraph}}</p>
-        </splide-slide>
-      </splide>
+      </div>
     </div>
     <div class="slide-wrapper d-lg-block d-none  wow animated__animated animated__fadeInUp">
       <splide :options="options">

@@ -97,6 +97,7 @@ export default {
 
 @media (max-width: 992px){
   .JoinTheCrew{
+    height: auto;
     .title{
       font-size: 34px;
     }

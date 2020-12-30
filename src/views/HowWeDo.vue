@@ -141,7 +141,7 @@ export default {
           breakpoints: {
             993: {
               fixedWidth  : 95,
-              focus    : 'center',
+              // focus    : 'center',
 	            perPage  : 3,
 	            trimSpace: false,
               
@@ -178,6 +178,7 @@ export default {
     position: absolute;
     top: 0;
     left: 35px;
+    z-index: -1;
   }
   h2{
     margin-bottom: 40px;
@@ -225,7 +226,7 @@ export default {
   .HowWeDo{
     overflow-x: hidden;
     .slider-navigation{
-      width: 100%;
+      width: 95%;
     }
     .cell p{
       font-weight: 500;

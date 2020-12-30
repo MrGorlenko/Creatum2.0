@@ -5,7 +5,8 @@
       path='/'
       title="WEBUI Cases"
       />
-    <div class="p-0 justify-content-between container-fluid d-flex flex-wrap">
+      <Vfade/>
+    <div class="p-0 blur justify-content-between container-fluid d-flex flex-wrap">
       <div class="case d-flex justify-content-center align-items-center" v-for='(item,index) in WEBUICases' :key='item.name'>
         <Cases
         :name="item.name"
@@ -23,11 +24,13 @@
 import HeaderClose from '@/components/Header-close.vue';
 import Cases from '@/components/Cases';
 import { mapState } from 'vuex';
+import Vfade from '@/components/FadeSoon';
 export default {
   name: 'WEBUIs',
   components: {
     HeaderClose,
-    Cases
+    Cases,
+    Vfade
   },
   data() {
     return {

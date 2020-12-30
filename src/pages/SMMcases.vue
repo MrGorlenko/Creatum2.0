@@ -5,7 +5,8 @@
       path='/'
       title="SMM Cases"
       />
-    <div class="p-0 justify-content-between container-fluid d-flex flex-wrap">
+      <Vfade/>
+    <div class="p-0 blur justify-content-between container-fluid d-flex flex-wrap">
       <div class="case d-flex justify-content-center align-items-center" v-for='(item,index) in SMMCases' :key='item.name'>
 
         <Cases
@@ -24,12 +25,14 @@
 <script>
 import HeaderClose from '@/components/Header-close.vue'
 import { mapState } from 'vuex';
-import Cases from '@/components/Cases'
+import Cases from '@/components/Cases';
+import Vfade from '@/components/FadeSoon';
 export default {
   name: 'SMMcases',
   components: {
     HeaderClose,
-    Cases
+    Cases,
+    Vfade
   },
   data() {
     return {

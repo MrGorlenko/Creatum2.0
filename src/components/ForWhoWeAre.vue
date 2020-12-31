@@ -71,7 +71,7 @@ export default {
 
 <style lang='scss'>
 .ForWhoWeAre{
-  height: 92vh;
+  height: auto;
   padding-top: 150px;
   h2{
     margin-bottom: 117px;

@@ -13,7 +13,7 @@
           SMM
         </splide-slide>
         <splide-slide >
-          Websites & Apps
+          Web-sites
         </splide-slide>
         <splide-slide >
           Branding
@@ -92,7 +92,7 @@
         <div class="cell cell_total d-flex align-items-center justify-content-between">
         <p>Итого</p>
         <div class="time">
-          <span>24</span>
+          <span>28</span>
           дня
         </div>
         </div>

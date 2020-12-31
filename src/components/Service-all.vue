@@ -7,7 +7,7 @@
     >
     <img class='w-100 h-100' :src="Service.img" alt="">
     <h3>{{Service.title}}</h3>
-    <p>{{Service.descripton}}</p>
+    <p class='service_description'>{{Service.descripton}}</p>
     <router-link :to="Service.url">
       <button class='button button_purple'>Подробнее</button>
     </router-link>
@@ -56,6 +56,13 @@ export default {
 </script>
 
 <style lang='scss'>
+
+@media (min-width: 992px){
+  .service_description{
+    height: 160px;
+  }
+}
+
 .Service{
   height: 100vh;
   .item{

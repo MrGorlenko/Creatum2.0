@@ -16,16 +16,16 @@
           SMM
         </splide-slide>
         <splide-slide >
-          Web Site
+          Web-sites
         </splide-slide>
-        <splide-slide >
+        <!-- <splide-slide >
           Mobile app
-        </splide-slide>
+        </splide-slide> -->
         <splide-slide >
           Branding
         </splide-slide>
         <splide-slide >
-          Past
+          Performance
         </splide-slide>
       </splide>
       </div>
@@ -48,8 +48,14 @@
             <div v-for="icon in icons" :key=icon.index>
               <div 
                 
-                :class="{'d-flex align-items-center justify-content-center icon-cell': icon.theme == 'SMM' ,
+                :class="{'d-flex align-items-center justify-content-center icon-cell': icon.theme == 'SMM',
                  'grey-block' : icon.theme != 'SMM'} " >
+                                  <!-- icon.theme=='SMM'
+                 ||icon.theme==['SMM','Web-sites']||icon.theme==['Web-sites','SMM']
+                 ||icon.theme==['SMM','Design'] -->
+                 <!-- <div class='d-flex align-items-center justify-content-center' 
+                 v-bind:class="{'icon-cell':icon.theme.match('SMM')}"> -->
+                 <!-- <div :class="[icon.theme=='SMM' ? activeClass : '', errorClass]"> -->
                  <img class='d-block' :src="icon.img" alt=""></div>
             </div>
           </div>
@@ -63,15 +69,15 @@
             </div>
           </div>
         </splide-slide>
-        <splide-slide>
+        <!-- <splide-slide>
           <div class="d-flex flex-wrap justify-content-between justify-content-lg-start">
             <div v-for="icon in icons" :key=icon.index >
-              <div :class="{'d-flex align-items-center justify-content-center icon-cell': icon.theme == 'Mobile-app',
+              <div :class="{'d-flex align-items-center justify-content-center icon-cell': icon.theme == 'Branding',
                'grey-block' : icon.theme != 'Mobile-app' }">
                 <img class='d-block' :src="icon.img" alt=""></div>
             </div>
           </div>
-        </splide-slide>
+        </splide-slide> -->
         <splide-slide>
           <div class="d-flex flex-wrap justify-content-between justify-content-lg-start">
             <div v-for="icon in icons" :key=icon.index >
@@ -86,8 +92,8 @@
           <div class="d-flex flex-wrap justify-content-between justify-content-lg-start">
             <div v-for="icon in icons" :key=icon.index >
               <div 
-              :class="{'d-flex align-items-center justify-content-center icon-cell': icon.theme == 'Past',
-               'grey-block' : icon.theme != 'Past' }">
+              :class="{'d-flex align-items-center justify-content-center icon-cell': icon.theme == 'Performance',
+               'grey-block' : icon.theme != 'Performance' }">
                 <img class='d-block' :src="icon.img" alt=""></div>
             </div>
           </div>
@@ -110,6 +116,10 @@ export default {
   },
   data() {
     return {
+      data: {
+        activeClass: 'icon-cell',
+        errorClass: 'grey-block'
+      },
       options: {
         type      : 'fade',
 		    perPage   : 1,
@@ -144,6 +154,7 @@ export default {
   },
   mounted() {
     this.$refs.primary.sync( this.$refs.secondary.splide );
+    let SMMIcons = false;
   },
   computed: {
     ...mapState({

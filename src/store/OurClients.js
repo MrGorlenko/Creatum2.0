@@ -5,7 +5,7 @@ const OurClients = {
     state: {
         icons: [
             {
-              theme: 'SMM',
+              theme: ['SMM', 'Web-sites'],
               img: require('../assets/SMMCases/2.jpeg')
             },
             {
@@ -32,10 +32,6 @@ const OurClients = {
               theme: 'Branding',
               img: require('../assets/BrandingCases/1.svg')
             },
-            // {
-            //   theme: 'SMM',
-            //   img: require('../assets/SMMCases/4.png')
-            // },
             {
               theme: 'Branding',
               img: require('../assets/BrandingCases/2.png')

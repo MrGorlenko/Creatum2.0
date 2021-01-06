@@ -16,11 +16,8 @@
           SMM
         </splide-slide>
         <splide-slide >
-          Web-sites
+          Websites
         </splide-slide>
-        <!-- <splide-slide >
-          Mobile app
-        </splide-slide> -->
         <splide-slide >
           Branding
         </splide-slide>
@@ -47,15 +44,9 @@
           <div class="d-flex flex-wrap justify-content-between justify-content-lg-start">
             <div v-for="icon in icons" :key=icon.index>
               <div 
-                
-                :class="{'d-flex align-items-center justify-content-center icon-cell': icon.theme == 'SMM',
-                 'grey-block' : icon.theme != 'SMM'} " >
-                                  <!-- icon.theme=='SMM'
-                 ||icon.theme==['SMM','Web-sites']||icon.theme==['Web-sites','SMM']
-                 ||icon.theme==['SMM','Design'] -->
-                 <!-- <div class='d-flex align-items-center justify-content-center' 
-                 v-bind:class="{'icon-cell':icon.theme.match('SMM')}"> -->
-                 <!-- <div :class="[icon.theme=='SMM' ? activeClass : '', errorClass]"> -->
+                class='d-flex align-items-center justify-content-center '
+                :class="{'icon-cell': icon.theme.includes('SMM'),
+                 'grey-block' : !icon.theme.includes('SMM')} " >
                  <img class='d-block' :src="icon.img" alt=""></div>
             </div>
           </div>
@@ -64,26 +55,18 @@
           <div class="d-flex flex-wrap justify-content-between justify-content-lg-start">
             <div v-for="icon in icons" :key=icon.index>
               <div 
-              :class="{'d-flex align-items-center justify-content-center icon-cell': icon.theme == 'Web-sites',
-               'grey-block' : icon.theme != 'Web-sites' }"><img class='d-block' :src="icon.img" alt=""></div>
+              class='d-flex align-items-center justify-content-center'
+              :class="{'icon-cell': icon.theme.includes('Web-sites'),
+               'grey-block' : !icon.theme.includes('Web-sites') }"><img class='d-block' :src="icon.img" alt=""></div>
             </div>
           </div>
         </splide-slide>
-        <!-- <splide-slide>
-          <div class="d-flex flex-wrap justify-content-between justify-content-lg-start">
-            <div v-for="icon in icons" :key=icon.index >
-              <div :class="{'d-flex align-items-center justify-content-center icon-cell': icon.theme == 'Branding',
-               'grey-block' : icon.theme != 'Mobile-app' }">
-                <img class='d-block' :src="icon.img" alt=""></div>
-            </div>
-          </div>
-        </splide-slide> -->
         <splide-slide>
           <div class="d-flex flex-wrap justify-content-between justify-content-lg-start">
             <div v-for="icon in icons" :key=icon.index >
               <div 
-              :class="{'d-flex align-items-center justify-content-center icon-cell': icon.theme == 'Branding',
-               'grey-block' : icon.theme != 'Branding' }">
+              :class="{'d-flex align-items-center justify-content-center icon-cell': icon.theme.includes('Branding'),
+               'grey-block' : !icon.theme.includes('Branding') }">
                 <img class='d-block' :src="icon.img" alt=""></div>
             </div>
           </div>
@@ -92,8 +75,8 @@
           <div class="d-flex flex-wrap justify-content-between justify-content-lg-start">
             <div v-for="icon in icons" :key=icon.index >
               <div 
-              :class="{'d-flex align-items-center justify-content-center icon-cell': icon.theme == 'Performance',
-               'grey-block' : icon.theme != 'Performance' }">
+              :class="{'d-flex align-items-center justify-content-center icon-cell': icon.theme.includes('Performance'),
+               'grey-block' : !icon.theme.includes('Performance') }">
                 <img class='d-block' :src="icon.img" alt=""></div>
             </div>
           </div>
@@ -155,6 +138,7 @@ export default {
   mounted() {
     this.$refs.primary.sync( this.$refs.secondary.splide );
     let SMMIcons = false;
+    console.log(typeof(this.icons[0].theme))
   },
   computed: {
     ...mapState({

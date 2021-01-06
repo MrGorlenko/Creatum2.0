@@ -48,8 +48,8 @@ const Crew = {
               ]
             },
             {
-              title: 'Head CMM Designer',
-              state: 'Удаленка',
+              title: 'Head SMM Designer',
+              state: 'Офис',
               subject: 'SMM',
               location: 'Moscow',        
               description: 'Быстрорастущее Digital-агенство полного цикла (SMM, Performance, UI/UX, Production), состоящее из 24 специалистов со всей России, костяк команды (8) в Москве предлагает работу с крупными корпоративными и незаурядными молодыми стартапами, а также молодой коллектив и отсутствие бюрократии',
